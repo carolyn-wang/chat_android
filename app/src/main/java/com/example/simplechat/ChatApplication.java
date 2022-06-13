@@ -1,9 +1,12 @@
+package com.example.simplechat;
+
+import android.app.Application;
+
 import com.parse.Parse;
 
 import okhttp3.OkHttpClient;
 
-public class ChatApplication extends android.app.Application{
-
+public class ChatApplication extends Application {
     private final String applicationId = "BgMeRhXN4Mfsr4iu7cg2PJPITPJgn9T4meopyWPG";
     private final String clientKey = "r6fZMD0BL8dZx0pVlYemVJbHwqaBtIRqO19SX40c";
     private final String server = "https://parseapi.back4app.com/";

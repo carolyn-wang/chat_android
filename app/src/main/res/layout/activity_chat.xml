@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SimpleChat">
+    tools:context=".ChatActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvMessages"
@@ -21,11 +21,11 @@
         app:layout_constraintTop_toBottomOf="@+id/rvMessages"
         app:layout_constraintRight_toRightOf="parent"
         android:contentDescription="sendButton"
-        app:layout_constraintLeft_toRightOf="@+id/textView"
+        app:layout_constraintLeft_toRightOf="@+id/composeText"
         android:src="@android:drawable/ic_menu_send" />
 
-    <TextView
-        android:id="@+id/textView"
+    <EditText
+        android:id="@+id/composeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/rvMessages"
