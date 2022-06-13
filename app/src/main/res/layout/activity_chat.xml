@@ -1,36 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@android:color/white"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ChatActivity">
+    android:layout_height="match_parent">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvMessages"
+    <!-- (RecyclerView with chat messages view will go here) -->
+
+    <RelativeLayout
+        android:id="@+id/rlSend"
+        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
-        android:layout_height="354dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        android:paddingTop="5dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:layout_height="wrap_content" >
+        <EditText
+            android:id="@+id/etMessage"
+            android:layout_toLeftOf="@+id/ibSend"
+            android:layout_alignBottom="@+id/ibSend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:hint="@string/message_hint"
+            android:inputType="textShortMessage"
+            android:imeOptions="actionSend"
+            />
 
-    <ImageButton
-        android:id="@+id/sendButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        app:layout_constraintTop_toBottomOf="@+id/rvMessages"
-        app:layout_constraintRight_toRightOf="parent"
-        android:contentDescription="sendButton"
-        app:layout_constraintLeft_toRightOf="@+id/composeText"
-        android:src="@android:drawable/ic_menu_send" />
+        <ImageButton
+            android:id="@+id/ibSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/send"
+            android:gravity="center"
+            android:paddingRight="10dp"
+            android:src="@android:drawable/ic_menu_send"
+            android:textSize="18sp" />
+    </RelativeLayout>
+</RelativeLayout>
 
-    <EditText
-        android:id="@+id/composeText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/rvMessages"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/sendButton"
-        android:text="enter message here" />
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".ChatActivity">-->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/rvMessages"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="354dp"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent" />-->
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/sendButton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@android:color/transparent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/rvMessages"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        android:contentDescription="sendButton"-->
+<!--        app:layout_constraintLeft_toRightOf="@+id/composeText"-->
+<!--        android:src="@android:drawable/ic_menu_send" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/composeText"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/rvMessages"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toLeftOf="@+id/sendButton"-->
+<!--        android:text="enter message here" />-->
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
